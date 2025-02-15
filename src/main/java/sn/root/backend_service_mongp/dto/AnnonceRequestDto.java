@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 
 @Data @AllArgsConstructor @NoArgsConstructor @Builder
 public class AnnonceRequestDto {
-    private Long user_id;
     private Integer kilosDisponibles;
     private LocalDateTime dateDepart;
     private LocalDateTime dateArrivee;
@@ -17,4 +16,5 @@ public class AnnonceRequestDto {
     private Double prixDuKilo;
     private String origin;
     private String destination;
+    private Long user_id;
 }
