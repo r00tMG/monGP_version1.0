@@ -1,0 +1,7 @@
+{
+  "name": "Mon-gp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
