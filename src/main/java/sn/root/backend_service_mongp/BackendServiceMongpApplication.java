@@ -16,12 +16,12 @@ public class BackendServiceMongpApplication {
 		SpringApplication.run(BackendServiceMongpApplication.class, args);
 	}
 
-	@Bean
-	CommandLineRunner start(UserRepository userRepository, AnnonceRepository annonceRepository){
-		return args -> {
-			userRepository.save(User.builder().email("user2").password("1234").build());
-			userRepository.save(User.builder().email("user3").password("1234").build());
-			userRepository.save(User.builder().email("user4").password("1234").build());
-		};
-	}
+//	@Bean
+//	CommandLineRunner start(UserRepository userRepository, AnnonceRepository annonceRepository){
+//		return args -> {
+//			userRepository.save(User.builder().email("user2").password("1234").build());
+//			userRepository.save(User.builder().email("user3").password("1234").build());
+//			userRepository.save(User.builder().email("user4").password("1234").build());
+//		};
+//	}
 }

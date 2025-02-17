@@ -1,0 +1,46 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: db-postgres
+    environment:
+      - 'POSTGRES_DB=db_mongp'
+      - 'POSTGRES_PASSWORD=1234'
+      - 'POSTGRES_USER=admin'
+    ports:
+      - '5432:5432'
+    volumes:
+      - mongp_data:/var/lib/postgresql/data
+    networks:
+      - mongp-net
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: page_admin
+    environment:
+      - 'PGADMIN_DEFAULT_EMAIL=admin@gmail.com'
+      - 'PGADMIN_DEFAULT_PASSWORD=1234'
+      - 'PGADMIN_CONFIG_SERVER_MOD=False'
+    volumes:
+      - mongp_data:/var/lib/postgresql/data
+    networks:
+      - mongp-net
+    ports:
+      - '5050:80'
+  backend-mongp:
+    build: ./
+    container_name: service-mongp
+    environment:
+      - DB_URL:jdbc:postgresql://db-postgres:5432/db_mongp
+    ports:
+      - '8001:8001'
+    networks:
+      - mongp-net
+    depends_on:
+      - postgres
+      - pgadmin
+
+volumes:
+  mongp_data:
+networks:
+  mongp-net:
+    driver: bridge
+
