@@ -11,7 +11,7 @@ import sn.root.backend_service_mongp.enumeration.StatusReservation;
 public class ReservationRequestDto {
     private Integer kilos_demandes;
     private Double  prix_de_la_demande;
-    private StatusReservation status = StatusReservation.EN_ATTENTE;
+    private StatusReservation status;
     private Long annonce_id;
     private Long user_id;
 }

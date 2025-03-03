@@ -1,5 +1,6 @@
 package sn.root.backend_service_mongp;
 
+import org.springdoc.webmvc.ui.SwaggerWelcomeCommon;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

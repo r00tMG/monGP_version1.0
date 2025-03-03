@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 
 public enum StatusReservation {
-    EN_ATTENTE,
-    CONFIRME,
-    REFUSE
+    PENDING,
+    CONFIRMED,
+    RESERVED
 }

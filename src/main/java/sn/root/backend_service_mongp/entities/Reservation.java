@@ -15,7 +15,7 @@ public class Reservation {
     private Integer kilos_demandes;
     private Double  prix_de_la_demande;
     @Enumerated(EnumType.STRING)
-    private StatusReservation status = StatusReservation.EN_ATTENTE;
+    private StatusReservation status = StatusReservation.PENDING;
 
     @ManyToOne
     @JoinColumn(name = "annonce_id", nullable = false)
@@ -28,7 +28,7 @@ public class Reservation {
     @PrePersist
     private void setDefaultStatus() {
         if (status == null) {
-            status = StatusReservation.EN_ATTENTE;
+            status = StatusReservation.PENDING;
         }
     }
 
