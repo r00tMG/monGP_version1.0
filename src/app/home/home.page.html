@@ -1,0 +1,107 @@
+<ion-menu contentId="main-content">
+    <menu style="background-color: #22283D;padding-bottom:15%;overflow-y:scroll">
+      <ion-card style="margin-top: 5%;padding-top:10%;background-color: #22283D">
+        <ion-card-content>
+          <ion-row style="margin-bottom: 15%;">
+            <h1><ion-img class="photo-profile" (click)="get_photo()" src="../../assets/icon/moi.png" alt=""></ion-img></h1>
+                <p>Demba Bakhoum</p>
+          </ion-row>
+          <ion-item class="slides">
+            <ion-icon name="home-outline"></ion-icon>
+            <ion-label routerLink="">Acceuil</ion-label>
+          </ion-item>
+          <ion-item class="slides">
+            <ion-icon name="clipboard-outline"></ion-icon>
+            <ion-label routerLink="/a-propos">A propos</ion-label>
+          </ion-item>
+          <ion-item class="slides">
+            <ion-icon name="clipboard-outline"></ion-icon>
+            <ion-label routerLink="/compte">Mon Compte</ion-label>
+          </ion-item>
+          <ion-item class="slides">
+            <ion-icon name="call-outline"></ion-icon>
+            <ion-label routerLink="/services">Nos services</ion-label>
+          </ion-item>
+          <ion-item class="slides" style="margin-top: 55%;">
+            <ion-icon name="exit-outline"></ion-icon>
+            <ion-label style="font-size:small;" (click)="deconnexion()">Se
+              deconnecter</ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </menu>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-content scrollY="true" class="pb-3 mb-3" style="background-color: rgb(6, 68, 20);">
+    <ion-row style="background-color: rgb(6, 68, 20);text-align: center;">
+      <ion-buttons>
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-row>
+    <!-- Fin Affichage de nos differents services -->
+    <!-- Details des transactions effectuées -->
+    <ion-row id="details" class="mt-0 contenu">
+      <ion-label style="display: flex;color:black;text-align:center;width:80%;margin-top:10%;">Publiez vos annonces, Gérez les réservations, et Connectez-vous avec vos clients grâce à MonGP</ion-label>
+      <button class="btn-com" routerLink="/annonces">Commencer</button>
+      <ion-card style="background-color:rgb(6, 68, 20);margin-left:10%;width:80%;padding:3%;">
+        <ion-card-title>Mode Opératoire</ion-card-title>
+      </ion-card>
+      <ion-card class="mode-op">
+        <ion-card-header>
+          Connexion
+        </ion-card-header>
+        <ion-card-content>
+          <ion-img src="../../assets/connect-DtUv0BKT.svg"></ion-img>
+         <p> En tant que bénéficiaire de la gratuité partielle (GP), accédez facilement à votre compte en quelques clics. Connectez-vous avec vos identifiants pour gérer vos annonces, suivre les kilos disponibles et interagir avec les clients intéressés. Profitez d'une interface simple et sécurisée, conçue pour vous permettre de publier rapidement et de manière efficace.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="mode-op">
+        <ion-card-header>
+          Publier
+        </ion-card-header>
+        <ion-card-content>
+          <ion-img src="../../assets/publish-9k00gNC6.svg"></ion-img>
+          <p>Une fois connecté, publiez vos kilos disponibles en quelques étapes simples. Ajoutez des détails tels que la quantité, la date et les lieux de récupération, et mettez vos annonces à la disposition des utilisateurs qui recherchent des produits à récupérer. Gagnez du temps grâce à un système de publication optimisé qui vous permet de gérer vos kilos de manière fluide et intuitive.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="mode-op">
+        <ion-card-header>
+          Rechercher
+        </ion-card-header>
+        <ion-card-content>
+          <ion-img src="../../assets/reserver-B9LkeDGr.svg"></ion-img>
+          <p>Grâce à notre système de recherche intuitif, trouvez rapidement les kilos disponibles mis en ligne par les bénéficiaires de la gratuité partielle (GP). Filtrez par origine, destination, et date pour repérer les offres qui correspondent à vos besoins. Chaque annonce est mise à jour en temps réel, vous garantissant une recherche fluide et précise.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="mode-op">
+        <ion-card-header>
+          Reserver
+        </ion-card-header>
+        <ion-card-content>
+          <ion-img src="../../assets/reserver-B9LkeDGr.svg"></ion-img>
+          <p>Une fois que vous avez trouvé les kilos qui vous intéressent, réservez-les en quelques clics. Sélectionnez la quantité et recevez une confirmation immédiate de votre réservation. Planifiez vos récupérations en toute simplicité grâce à notre interface de réservation efficace et transparente.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="mode-op">
+        <ion-card-header>
+          Payer par carte
+        </ion-card-header>
+        <ion-card-content>
+          <ion-img src="../../assets/payment-HmB40Z8w.svg"></ion-img>
+          <p>Effectuez vos paiements directement en ligne avec une carte de crédit ou de débit en toute sécurité. Notre plateforme de paiement est rapide et fiable, vous permettant de finaliser vos réservations sans souci. Vos informations de paiement sont protégées grâce à des standards de sécurité de pointe.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="mode-op">
+        <ion-card-header>
+          Communication
+        </ion-card-header>
+        <ion-card-content>
+          <ion-img src="../../assets/message-eFm5v06A.svg"></ion-img>
+          <p>Restez en contact avec les GP et les autres utilisateurs grâce à notre système de messagerie intégré. Posez des questions, organisez la récupération des kilos ou échangez des informations en toute simplicité. Une communication fluide et rapide pour un service transparent et réactif.</p>
+        </ion-card-content>
+      </ion-card>
+      
+    </ion-row>
+    <!-- Fin details -->
+  </ion-content>
+</div>
