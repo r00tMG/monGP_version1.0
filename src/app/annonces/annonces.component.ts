@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { FormGroup,FormControl } from '@angular/forms';
 @Component({
   selector: 'app-annonces',
   templateUrl: './annonces.component.html',
@@ -8,7 +8,11 @@ import { Component } from '@angular/core';
 export class AnnoncesComponent {
 
   constructor() { }
-
-  ngOnInit() {}
+  profileForm = new FormGroup({
+    depart: new FormControl(''),
+    arrivee: new FormControl(''),
+    origine: new FormControl(''),
+    dest: new FormControl(''),
+  });
 
 }
