@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { AnnoncesComponent } from './annonces/annonces.component';
 
 const routes: Routes = [
   {
@@ -25,7 +24,8 @@ const routes: Routes = [
     loadChildren: () => import('./services/services.module').then( m => m.ServicesPageModule)
   },
   {
-     path: 'annonces', component: AnnoncesComponent 
+    path: 'annonces',
+    loadChildren: () => import('./annonces/annonces.module').then( m => m.AnnoncesPageModule)
   },
 ];
 

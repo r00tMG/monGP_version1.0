@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row style="background-color: rgb(6, 68, 20);text-align: center;">
+      <ion-buttons>
+        <ion-back-button slot="start" defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Annonces</ion-title>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form [formGroup]="myGroup">
+  <ion-item>
+    <ion-input label="Date depart" type="date" labelPlacement="floating" placeholder="Choisir la date" formControlName="depart"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Date arrivée" type="date" labelPlacement="floating" placeholder="Choisir la date" formControlName="arrivee"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Origine" type="select" placeholder="" labelPlacement="floating" formControlName="origine"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label="Destination" type="text" placeholder="" labelPlacement="floating" formControlName="dest"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button slot="end" style="background: rgb(6, 68, 20);" (click)="datas()">Trouver un Gp </ion-button>
+  </ion-item>
+</form>
+</ion-content>

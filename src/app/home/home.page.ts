@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AnnoncesComponent } from '../annonces/annonces.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
